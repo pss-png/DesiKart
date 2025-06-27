@@ -1,0 +1,184 @@
+/* Account Component Styles */
+
+/* Container for the entire tabs component */
+.react-tabs {
+    max-width: 400px;
+    margin: 2rem auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Tab list container */
+  .react-tabs__tab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+  }
+  
+  /* Individual tab styling */
+  .react-tabs__tab {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6c757d;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Tab hover effect */
+  .react-tabs__tab:hover {
+    background: #e9ecef;
+    color: #495057;
+  }
+  
+  /* Active tab styling */
+  .react-tabs__tab--selected {
+    background: #ffffff;
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  /* Active tab indicator */
+  .react-tabs__tab--selected::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+  }
+  
+  /* Tab focus outline */
+  .react-tabs__tab:focus {
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
+  }
+  
+  /* Tab panel container */
+  .react-tabs__tab-panel {
+    padding: 2rem;
+    background: #ffffff;
+  }
+  
+  /* Hidden tab panels */
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  /* Input field styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #ffffff;
+    color: black;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  /* Input placeholder styling */
+  input::placeholder {
+    color: #adb5bd;
+    text-transform: capitalize;
+  }
+  
+  /* Input focus state */
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    background: #f8f9ff;
+  }
+  
+  /* Input hover state */
+  input:hover {
+    border-color: #ced4da;
+  }
+  
+  /* Submit button (if you want to add one) */
+  .submit-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  }
+  
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .react-tabs {
+      margin: 1rem;
+      max-width: none;
+    }
+    
+    .react-tabs__tab {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .react-tabs__tab-panel {
+      padding: 1.5rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Optional: Add some animation to tab panel switching */
+  .react-tabs__tab-panel {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
